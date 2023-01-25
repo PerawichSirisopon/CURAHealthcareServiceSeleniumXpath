@@ -38,10 +38,7 @@ class Appointment {
 		
 		String result = driver.findElement(By.xpath("//*[@id=\"comment\"]")).getText();
 		
-		if(result.equalsIgnoreCase("Heart"))
-			System.out.println("Pass");
-		else
-			System.out.println("Fail");
+		assertEquals("Heart", result);
 		
 		Thread.sleep(5000);
 		driver.quit();
